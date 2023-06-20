@@ -62,17 +62,22 @@ export class WebsocketService {
 
   private subject: AnonymousSubject<MessageEvent> | undefined;
   public messages: Subject<Message>;
+  private nomEventEnCours: string |undefined;
 
   constructor() {
       this.messages = <Subject<Message>>this.connect(CHAT_URL).pipe(
           map(
               (response: MessageEvent): Message => {
-                  console.log("ici"+response.data);
+                  console.log("reception :"+response.data);
                   let data = JSON.parse(response.data)
                   return data;
               }
           )
       );
+  }
+
+  public setEvent(nom: string){
+    this.nomEventEnCours = nom;
   }
 
   public connect(url: string | URL): AnonymousSubject<MessageEvent> {
@@ -106,7 +111,7 @@ export class WebsocketService {
           error: this.handleError,
           complete: this.completed,
           next: (data: Object) => {
-              const payload = { event: 'testping', message: data}
+              const payload = { event: this.nomEventEnCours, message: data}
               // const payload = data
               console.log('Message sent to websocket: ', payload);
               if (ws.readyState === WebSocket.OPEN) {

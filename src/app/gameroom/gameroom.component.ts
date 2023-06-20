@@ -9,7 +9,7 @@ import { Message, WebsocketService } from "../services/websocket.service";
 export class GameroomComponent implements OnInit {
   title = 'socketrv';
   content : string = '';
-  received : Message[] = [];
+  received : any[] = [];
   sent : any[] = [];
 
   constructor(private WebsocketService: WebsocketService) {
@@ -32,7 +32,7 @@ export class GameroomComponent implements OnInit {
     };
     message.source = 'localhost';
     message.content = this.content;
-    const payload = { event: 'testping', message: message}
+    this.WebsocketService.setEvent('testping')
     this.sent.push(message);  
     this.WebsocketService.messages.next(message);
   }
