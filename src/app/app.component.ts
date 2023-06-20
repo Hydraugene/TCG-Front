@@ -35,6 +35,8 @@ export class AppComponent {
       this.title = res
     });
 
+    await this.http.get('http://localhost:3000/test')
+
     return token;
   }
 
