@@ -1,6 +1,4 @@
-<p>gameroom works!</p>
-<!--src\app\app.component.html-->
-<h1>
+<!-- <h1>
     Angular + WebSockets
   </h1>
   <br>
@@ -28,4 +26,43 @@
     <ul>
       <li *ngFor="let item of received">Source: OSEF -> Content {{item}}</li>
     </ul>
+  </div> -->
+
+  <div class="container">
+  
+  <div class="area gameInfo">
+    <div *ngIf="!partieCommence">
+      <button (click)="lancerPartie()">Lancer la partie</button>
+      <p>La partie n'a pas débutée</p>
+    </div>
+    <div *ngIf="partieCommence">
+      <p *ngIf="!tourAdverse">C'est votre tour</p>
+      <p *ngIf="tourAdverse">C'est le tour adverse</p>
+    </div>
+    <div class="Chat">
+      <ul>
+        <li *ngFor="let item of received">{{item}}</li>
+      </ul>
+    </div>
+  <div class="main">
+    <p>Cartes en main : {{nbCartesEnMain}}</p>
   </div>
+  </div>
+  <div class="area terrain">
+    <!-- <div class="terrainAdv">
+      Terrain Adverse
+    </div> -->
+    <div>
+      <!-- Votre terrain -->
+      <img src="../../assets/boardComplet.png" alt="Image du terrain" style="width: 100%;">
+    </div>
+  </div>
+
+  <div class="area actions">
+    <button (click)="piocher()">Piocher</button> <br>
+    <button (click)="jouer()">Jouer une carte</button> <br>
+    <button (click)="finTour()">Finir le tour</button> <br>
+  </div>
+  <!-- <button (click)="sendMsg('testping')">Send Message</button> -->
+
+</div>

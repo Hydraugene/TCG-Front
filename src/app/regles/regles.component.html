@@ -1,2 +1,66 @@
-<p>Voici les regles du jeu en détails, si vous avez envie de les lire</p>
-(Je les mettrais plus tard parce que flemme)
+Survol du jeu
+Le jeu se joue à deux, en duel
+La partie se termine quand un joueur perd, à savoir : 
+Les dégâts subis par votre personnage principal sont égaux ou supérieurs à ses points de vie.
+Vous devez piocher mais votre deck est vide.
+Une action impossible à réaliser ou devant être réalisé 0 ou un nombre négatif de fois ne se réalise pas.
+Un coût doit être payé pour qu’un effet puisse se lancer.
+Informations des cartes
+Chaque carte est identifiée grâce à un numéro.
+Chaque carte à un nom. ce nom peut être commun à plusieurs cartes, qui sont différenciées par leur numéro
+Chaque carte à un coup, qui doit être payé pour pouvoir la jouer. 
+Les cartes peuvent avoir un effet (voir le paragraphe sur les effets)
+Les cartes de personnage ont deux statistiques, la force et la vie.
+La force permet de calculer les dégats du personnage lors d’un combat (voir combats)
+La vie correspond au nombre de dégats que le personnage peut subir avant de mourir
+Une carte dispose d’un supertype
+Les Supertypes de cartes
+Personnage : les personnages sont les cartes qui peuvent se battre. ils peuvent avoir des effets.
+Modificateurs pernanents : Je sais pas encore trop à quoi ça va ressembler ni ce que ça va faire mais ils sont là
+Ephémères : Ils font un effet mais ils ne passent pas par le terrain, ils vont sur la pile, font leur effet puis vont au cimetière
+Les types de cartes : les cartes peuvent avoir d’autres types, qui permettent de les classifier par synergie.
+Zones de jeu
+Deck
+Cimetière
+Personnages
+Principal
+Acolytes
+Modificateurs permanents
+Mana
+Une fois par tour, le joueur peut poser une carte de sa main face verso comme dans la zone de mana. cette carte devient un producteur de mana, qui doit être engagé quand elle est utilisée pour payer un coût.
+Voir schéma ( en bas de la page )
+Terminologie
+Preparation de jeu
+Le deck fait minimum X cartes (50 ?)
+Une carte ne peut être présente qu’en max x4.
+Pour commencer une partie, chaque joueur pose son personnage principal dans sa zone, puis mélange son deck. Les joueurs définissent quel joueur commence puis piochent 7 cartes. Ils peuvent mulligan 1 fois à nouveau à 7 cartes.
+Déroulement du jeu
+Les étapes
+Dégagement : tous les permanents du joueur se dégagent
+Pioche : Le joueur dont c’est le tour pioche une carte.
+Principale : durant cette phase le joueur peut jouer ces cartes et déclarer ses attaques
+Fin : les effets de fin de tour se déclenchent ici. à la fin de cette phase le joueur défausse des cartes s’il en plus de 7 en main et passe à l’adversaire.
+Combat
+lorsque deux personnages s'affrontent, leurs forces sont comparés. celui avec la force la élevé gagne et inflige à l'autre la différence entre leurs attaques en dégats.
+Les dégats font perdre des points de vie. un personnage principal attaquant ne subit pas de perte de points de vie s’il subit des dégâts de combat.
+Après la déclaration de l’attaque, les deux joueurs peuvent avoir des effets, le joueur actif d'abord, et l’autre ensuite. Chaque réponse de l’un des deux joueurs offre à l’autre la possibilité de répondre à nouveau.
+Chaque personnage peut attaquer une fois pendant le tour de son contrôleur s’il n’a pas le mal d’invocation.
+Positions de combat : Les acolytes ont deux positions de combat
+Position de combat: Dans celle position, l’acolyte est orienté vers l’adversaire. Il peut attaquer et être attaqué par l’acolyte en face de lui et le personnage principal adverse, il sert donc de protection pour son personnage principal
+Position de support : Dans cette position, l’acolyte est orienté vers son personnage principal. Il ne peut ni attaquer ni être attaqué, et expose donc son personnage principal à des attaques. Il peut utiliser son attaque à travers celle de son représentant, en donnant un boost de force à ce dernier égal à la force de l’acolyte.
+Vous pouvez changer votre personnage de position une fois durant votre tour.
+Cibles d’attaque
+Pour le personnage principal : Si l’adversaire sont à au moins un acolyte en position de défense, le personnage principal du joueur actif doit attaquer l’un d’eux. Sinon, il peut attaquer directement le personnage principal adverse.
+Pour les acolytes : S’il n’y a pas d’acolyte en face d’eux, ou qu’il est en position d’attaque, la cible de son attaque est le personnage principal adverse. Sinon, c’est l’acolyte en face de lui.
+Lorsqu’une carte force deux personnages à s’affronter, les personnages en position de support peuvent être ciblé par l’attaque.
+Effets
+les effets passifs : Certaines cartes, comme les personnages ou modificateurs permanents, peuvent avoir des effets passifs, qui sont actif tout le temps, sans avoir besoin d’un déclencheur ou d’une activation
+les effets actifs : éphémères et capacités
+Les éphémères ont un effet qui est appliqué au moment de leur résolution
+Les capacités se divisent en trois catégories : 
+Activées : Une capacité activé applique un effet lorsqu’un joueur paye le coût de cette capacité. 
+Une capacité activé d’un permanent peut parfois aussi être joué depuis la main du joueur en défaussant la carte en plus de payer ses autres coup
+Déclenchés : une capacité déclenchée a un effet quand un événement correspondant à son déclencheur se produit dans la partie.
+Mixtes : Certaines capacités déclenchées de personnage ou de modificateurs peuvent être joués comme capacités activé depuis la main du joueur en défaussant la carte en plus des autres coûts.
+Une capacité “lente” est indiquée par le mot clé “lent” et ne peut être lancée que pendant la phase principale du joueur.
+Si une capacité n’est pas marqué comme lente, elle peut être utilisé à tout instant où le joueur à la priorité

@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        <h1>Page de connexion</h1>
+    </div>
+    <div>
+        <form (submit)="login()" #f="ngForm">
+            <label *ngIf="erreur">Informations erronées</label>
+            <label>Identifiant</label>
+            <input type="text" name="idUser" [(ngModel)]="Username" required placeholder="Saisissez votre identifiant">
+            <label>Mot de passe</label>
+            <input type="password" name="password" [(ngModel)]="Password" required placeholder="saisissez votre mot de passe">
+            <input type="submit" value="Connexion" [disabled]="f.invalid">
+            <input type="reset" value="Annuler">
+        </form>
+    </div>
+</div>

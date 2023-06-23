@@ -1,0 +1,89 @@
+.container {
+    display: flex;
+    /* flex-direction: column; */
+    height: 100%;
+    text-align: center;
+  }
+
+
+.gameInfo {
+    /* height: 100%; */
+    width: 25%;
+    /* float: left; */
+    color: blue;
+  }
+  
+  .terrain {
+    /* height: 100%; */
+    width: 41%;
+    /* margin-left: 20%; */
+    
+  }
+  
+  .actions {
+    /* height: 100%; */
+    width: 25%;
+    /* margin-left: 80%; */
+    /* clear: both; */
+    /* float: right; */
+  }
+  
+
+/* .container {
+    position: relative;
+    height: 100%;
+    display: flex;
+  }
+  
+.gameInfo {
+    width: calc(20% - 10px);
+    background-color: #f2f2f2;
+  }
+  
+  .terrain {
+    flex-grow: 1;
+    margin: 0 10px;
+    background-color: #d9d9d9;
+  }
+  
+  .actions {
+    width: calc(20% - 10px);
+    background-color: #f9f9f9;
+  }
+  
+
+  .gameInfoContent,
+  .terrainContent,
+  .actionsContent {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+  } */
+
+  button {
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 5px;
+  }
+  
+  button:hover {
+    background-color: darkblue;
+  }
+  
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.4);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }

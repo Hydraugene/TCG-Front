@@ -1,0 +1,18 @@
+<section class="header">
+    <span class="logo">TCG</span>
+    <!-- <a href="" routerLink="/intranet" class="logo"></a> -->
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <!-- <li><a routerLink="/profil">Profil</a></li> -->
+        <!-- <li><a routerLink="/intranet">Intranet</a> -->
+            <ul>
+                <li><a href routerLink="/" title="Acceuil">Acceuil</a></li>
+                <li><a href routerLink="/matchmaking" title="jeu">Jouer</a></li>
+                <li><a href routerLink="/connexion" title="connexion">Connexion</a></li>
+                <li><a href routerLink="/" (click)="deconnexion()">Deconnexion</a></li>
+            </ul>
+        <!-- </li> -->
+        <!-- <li><a routerLink="/" href *ngIf="authService.auth.currentUser" (click)="authService.signOut()">Log out</a></li> -->
+    </ul>
+</section>

@@ -15,6 +15,10 @@ export interface Message {
   providedIn: 'root'
 })
 export class WebsocketService {
+  public inGame: boolean = false;
+
+
+
   // private subject: AnonymousSubject<MessageEvent>;
   // public messages: Subject<Message>;
 
